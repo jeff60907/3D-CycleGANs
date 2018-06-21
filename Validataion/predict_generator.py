@@ -34,9 +34,9 @@ config['batch_size'] = batch_size
 
 ################################################################
 
-# make ModelNet10 training data dir  
+# make chair40 training data dir  8x5  
 def make_traing_data_dir(data):
-    for _ in range(20):
+    for _ in range(8):
         x_train_batch, Y_train_batch = data.load_X_Y_voxel_grids_train_next_batch()
         for name in data.batch_name:
             if not os.path.exists(name[24:-18]+'/'+name[24:-13]):
@@ -44,7 +44,6 @@ def make_traing_data_dir(data):
 
 # load data config
 data = read_tools.Data(config)
-#data.shuffle_X_Y_files(label='test')  
 
 make_traing_data_dir(data)
 
