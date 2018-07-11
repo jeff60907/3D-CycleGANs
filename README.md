@@ -33,5 +33,5 @@ $ python predict_generator.py
 ```
 ####  Intersection-over-union (IoU) Metrics
 ```
-$ python chair ../Data/chair/train_3d/
+$ python IoU_test.py chair ../Data/chair/train_3d/
 ```
